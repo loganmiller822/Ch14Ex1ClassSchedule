@@ -4,7 +4,6 @@ using Moq;
 using Microsoft.AspNetCore.Mvc;
 using ClassSchedule.Models;
 using ClassSchedule.Controllers;
-using Microsoft.AspNetCore.Http;
 
 public class TeacherControllerTests
 {
