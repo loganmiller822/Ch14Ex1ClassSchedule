@@ -25,6 +25,12 @@ namespace ClassSchedule
 
             services.AddDbContext<ClassScheduleContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ClassScheduleContext")));
+
+            services.AddDbContext<ClassScheduleContext>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            services.AddScoped<IClassScheduleUnitOfWork, ClassScheduleUnitOfWork>();
         }
 
         // Use this method to configure the HTTP request pipeline.
