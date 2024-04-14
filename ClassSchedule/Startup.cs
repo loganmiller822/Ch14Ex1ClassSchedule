@@ -26,6 +26,8 @@ namespace ClassSchedule
             services.AddDbContext<ClassScheduleContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ClassScheduleContext")));
 
+            services.AddHttpContextAccessor();
+
             services.AddDbContext<ClassScheduleContext>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
